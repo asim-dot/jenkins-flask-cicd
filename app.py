@@ -10,5 +10,9 @@ def home():
 def status():
     return {"status": "OK", "message": "Service is running"}
 
+@app.route('/about')
+def about():
+    return render_template('about.html', title='About This App')
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=False)
